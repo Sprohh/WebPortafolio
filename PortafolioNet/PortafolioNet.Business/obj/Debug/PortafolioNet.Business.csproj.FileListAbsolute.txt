@@ -1,0 +1,47 @@
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.pdb
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\bin\Debug\PruebaConexionNET.exe
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\bin\Debug\PruebaConexionNET.pdb
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\bin\Debug\PruebaConexionNET.exe.config
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.csprojResolveAssemblyReference.cache
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.csproj.CoreCompileInputs.cache
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.pdb
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.csprojAssemblyReference.cache
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.csproj.CoreCompileInputs.cache
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.pdb
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.pdb
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.dll.config
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Data.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Data.pdb
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Data.dll.config
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.xml
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.csproj.CopyComplete
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.csprojResolveAssemblyReference.cache
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.dll
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.pdb
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.dll.config
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.dll
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.pdb
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.dll
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Data.dll
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Data.pdb
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.xml
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Brayan\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.dll.config
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.dll
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Business.pdb
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.dll
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Data.dll
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\PortafolioNet.Data.pdb
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.xml
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.csprojResolveAssemblyReference.cache
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.dll
+C:\Users\Taisa\Desktop\Portafolio web\PortafolioNet\PortafolioNet.Business\obj\Debug\PortafolioNet.Business.pdb

@@ -1,0 +1,34 @@
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\PortafolioTest.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\PortafolioTest.pdb
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.csprojResolveAssemblyReference.cache
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.csproj.CoreCompileInputs.cache
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.dll
+C:\Users\Informatica\Desktop\PortafolioWeb-master\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.pdb
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\PortafolioTest.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\PortafolioTest.pdb
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.csprojAssemblyReference.cache
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.csproj.CoreCompileInputs.cache
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.csproj.CopyComplete
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.dll
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\obj\Debug\PortafolioTest.pdb
+C:\Users\Sergio Orellana\Desktop\Programación\Portafolio web\PortafolioNet\PortafolioTest\bin\Debug\PortafolioTest.dll.config

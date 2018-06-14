@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LindaSonrisaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BOLETA_CLIENTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <Property Name="RUT_CLIENTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.SYS_C0011167" FromRole="BOLETA_CLIENTE" ToRole="CLIENTE" />
+    <NavigationProperty Name="SERVICIO" Relationship="Self.DETALLE_BOLETA_CLI" FromRole="BOLETA_CLIENTE" ToRole="SERVICIO" />
+  </EntityType>
+  <EntityType Name="CIUDAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="COMUNA" Relationship="Self.SYS_C0011060" FromRole="CIUDAD" ToRole="COMUNA" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="RUT" />
+    </Key>
+    <Property Name="RUT" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VULNERABLE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="BOLETA_CLIENTE" Relationship="Self.SYS_C0011167" FromRole="CLIENTE" ToRole="BOLETA_CLIENTE" />
+    <NavigationProperty Name="PERSONA" Relationship="Self.SYS_C0011094" FromRole="CLIENTE" ToRole="PERSONA" />
+    <NavigationProperty Name="HORA" Relationship="Self.SYS_C0011145" FromRole="CLIENTE" ToRole="HORA" />
+  </EntityType>
+  <EntityType Name="COMUNA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_CIUDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.SYS_C0011060" FromRole="COMUNA" ToRole="CIUDAD" />
+    <NavigationProperty Name="PERSONA" Relationship="Self.SYS_C0011089" FromRole="COMUNA" ToRole="PERSONA" />
+  </EntityType>
+  <EntityType Name="CONTACTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CORREO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MENSAJE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DIA">
+    <Key>
+      <PropertyRef Name="DIA1" />
+      <PropertyRef Name="RUT_FUNCIONARIO" />
+    </Key>
+    <Property Name="DIA1" Type="DateTime" Nullable="false" />
+    <Property Name="HORA_INICIO" Type="DateTime" Nullable="false" />
+    <Property Name="HORA_TERMINO" Type="DateTime" Nullable="false" />
+    <Property Name="RUT_FUNCIONARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="FUNCIONARIO" Relationship="Self.SYS_C0011162" FromRole="DIA" ToRole="FUNCIONARIO" />
+  </EntityType>
+  <EntityType Name="FAMILIA_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TIPO_PRODUCTO" Relationship="Self.SYS_C0011116" FromRole="FAMILIA_PRODUCTO" ToRole="TIPO_PRODUCTO" />
+  </EntityType>
+  <EntityType Name="FUNCIONARIO">
+    <Key>
+      <PropertyRef Name="RUT" />
+    </Key>
+    <Property Name="RUT" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_TIPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="DIA" Relationship="Self.SYS_C0011162" FromRole="FUNCIONARIO" ToRole="DIA" />
+    <NavigationProperty Name="PERSONA" Relationship="Self.SYS_C0011139" FromRole="FUNCIONARIO" ToRole="PERSONA" />
+    <NavigationProperty Name="TIPO_FUNCIONARIO" Relationship="Self.SYS_C0011140" FromRole="FUNCIONARIO" ToRole="TIPO_FUNCIONARIO" />
+    <NavigationProperty Name="HORA" Relationship="Self.SYS_C0011144" FromRole="FUNCIONARIO" ToRole="HORA" />
+    <NavigationProperty Name="ORDEN_PEDIDO" Relationship="Self.SYS_C0011156" FromRole="FUNCIONARIO" ToRole="ORDEN_PEDIDO" />
+  </EntityType>
+  <EntityType Name="HORA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_HORA" Type="DateTime" Nullable="false" />
+    <Property Name="RUT_FUNCIONARIO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="RUT_CLIENTE" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.SYS_C0011145" FromRole="HORA" ToRole="CLIENTE" />
+    <NavigationProperty Name="FUNCIONARIO" Relationship="Self.SYS_C0011144" FromRole="HORA" ToRole="FUNCIONARIO" />
+  </EntityType>
+  <EntityType Name="ORDEN_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_VENC" Type="DateTime" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_FUNCIONARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_ESTADO_PEDIDO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="FUNCIONARIO" Relationship="Self.SYS_C0011156" FromRole="ORDEN_PEDIDO" ToRole="FUNCIONARIO" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.SYS_C0011155" FromRole="ORDEN_PEDIDO" ToRole="PRODUCTO" />
+    <NavigationProperty Name="TIPO_ESTADO_PEDIDO" Relationship="Self.SYS_C0011157" FromRole="ORDEN_PEDIDO" ToRole="TIPO_ESTADO_PEDIDO" />
+  </EntityType>
+  <EntityType Name="PERMISO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.PERMISO_USUARIO" FromRole="PERMISO" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="RUT" />
+    </Key>
+    <Property Name="RUT" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DV" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="P_NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="S_NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="P_APELLIDO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="S_APELLIDO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_NAC" Type="DateTime" Nullable="false" />
+    <Property Name="SEXO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ID_COMUNA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.SYS_C0011094" FromRole="PERSONA" ToRole="CLIENTE" />
+    <NavigationProperty Name="COMUNA" Relationship="Self.SYS_C0011089" FromRole="PERSONA" ToRole="COMUNA" />
+    <NavigationProperty Name="FUNCIONARIO" Relationship="Self.SYS_C0011139" FromRole="PERSONA" ToRole="FUNCIONARIO" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.SYS_C0011090" FromRole="PERSONA" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="PREGUNTA_SECRETA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TXT_PREGUNTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.SYS_C0011073" FromRole="PREGUNTA_SECRETA" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRECIO_VENTA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_PROVEEDOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_TIPOPRODUCTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="ORDEN_PEDIDO" Relationship="Self.SYS_C0011155" FromRole="PRODUCTO" ToRole="ORDEN_PEDIDO" />
+    <NavigationProperty Name="PROVEEDOR" Relationship="Self.SYS_C0011124" FromRole="PRODUCTO" ToRole="PROVEEDOR" />
+    <NavigationProperty Name="TIPO_PRODUCTO" Relationship="Self.SYS_C0011125" FromRole="PRODUCTO" ToRole="TIPO_PRODUCTO" />
+  </EntityType>
+  <EntityType Name="PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RUT_EMPRESA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DV_EMPRESA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE_REPRESENTANTE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RUT_REPRESENTANTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DV_REPRESENTANTE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_RUBRO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.SYS_C0011124" FromRole="PROVEEDOR" ToRole="PRODUCTO" />
+    <NavigationProperty Name="RUBRO_PROVEEDOR" Relationship="Self.SYS_C0011108" FromRole="PROVEEDOR" ToRole="RUBRO_PROVEEDOR" />
+  </EntityType>
+  <EntityType Name="RUBRO_PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PROVEEDOR" Relationship="Self.SYS_C0011108" FromRole="RUBRO_PROVEEDOR" ToRole="PROVEEDOR" />
+  </EntityType>
+  <EntityType Name="SERVICIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRECIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="BOLETA_CLIENTE" Relationship="Self.DETALLE_BOLETA_CLI" FromRole="SERVICIO" ToRole="BOLETA_CLIENTE" />
+  </EntityType>
+  <EntityType Name="TIPO_ESTADO_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ORDEN_PEDIDO" Relationship="Self.SYS_C0011157" FromRole="TIPO_ESTADO_PEDIDO" ToRole="ORDEN_PEDIDO" />
+  </EntityType>
+  <EntityType Name="TIPO_FUNCIONARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="FUNCIONARIO" Relationship="Self.SYS_C0011140" FromRole="TIPO_FUNCIONARIO" ToRole="FUNCIONARIO" />
+  </EntityType>
+  <EntityType Name="TIPO_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_FAMILIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="FAMILIA_PRODUCTO" Relationship="Self.SYS_C0011116" FromRole="TIPO_PRODUCTO" ToRole="FAMILIA_PRODUCTO" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.SYS_C0011125" FromRole="TIPO_PRODUCTO" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CLAVE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_PREGUNTA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="RESP_PREGUNTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PERSONA" Relationship="Self.SYS_C0011090" FromRole="USUARIO" ToRole="PERSONA" />
+    <NavigationProperty Name="PREGUNTA_SECRETA" Relationship="Self.SYS_C0011073" FromRole="USUARIO" ToRole="PREGUNTA_SECRETA" />
+    <NavigationProperty Name="PERMISO" Relationship="Self.PERMISO_USUARIO" FromRole="USUARIO" ToRole="PERMISO" />
+  </EntityType>
+  <EntityType Name="VISITAS_WEB">
+    <Key>
+      <PropertyRef Name="CANTIDAD" />
+    </Key>
+    <Property Name="CANTIDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <Association Name="SYS_C0011167">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="BOLETA_CLIENTE" Type="Self.BOLETA_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="BOLETA_CLIENTE">
+        <PropertyRef Name="RUT_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011060">
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="1" />
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDAD">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMUNA">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011094">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="CLIENTE">
+        <PropertyRef Name="RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011145">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="HORA" Type="Self.HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="HORA">
+        <PropertyRef Name="RUT_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011089">
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="1" />
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMUNA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="ID_COMUNA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011162">
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="1" />
+    <End Role="DIA" Type="Self.DIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FUNCIONARIO">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="DIA">
+        <PropertyRef Name="RUT_FUNCIONARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011116">
+    <End Role="FAMILIA_PRODUCTO" Type="Self.FAMILIA_PRODUCTO" Multiplicity="1" />
+    <End Role="TIPO_PRODUCTO" Type="Self.TIPO_PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FAMILIA_PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TIPO_PRODUCTO">
+        <PropertyRef Name="ID_FAMILIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011139">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="FUNCIONARIO">
+        <PropertyRef Name="RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011140">
+    <End Role="TIPO_FUNCIONARIO" Type="Self.TIPO_FUNCIONARIO" Multiplicity="1" />
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_FUNCIONARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FUNCIONARIO">
+        <PropertyRef Name="ID_TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011144">
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="0..1" />
+    <End Role="HORA" Type="Self.HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FUNCIONARIO">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="HORA">
+        <PropertyRef Name="RUT_FUNCIONARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011156">
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FUNCIONARIO">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="ID_FUNCIONARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011155">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011157">
+    <End Role="TIPO_ESTADO_PEDIDO" Type="Self.TIPO_ESTADO_PEDIDO" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_ESTADO_PEDIDO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="ID_ESTADO_PEDIDO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011090">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="ID_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011073">
+    <End Role="PREGUNTA_SECRETA" Type="Self.PREGUNTA_SECRETA" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PREGUNTA_SECRETA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="ID_PREGUNTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011124">
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="ID_PROVEEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011125">
+    <End Role="TIPO_PRODUCTO" Type="Self.TIPO_PRODUCTO" Multiplicity="1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="ID_TIPOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011108">
+    <End Role="RUBRO_PROVEEDOR" Type="Self.RUBRO_PROVEEDOR" Multiplicity="1" />
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RUBRO_PROVEEDOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVEEDOR">
+        <PropertyRef Name="ID_RUBRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DETALLE_BOLETA_CLI">
+    <End Role="BOLETA_CLIENTE" Type="Self.BOLETA_CLIENTE" Multiplicity="*" />
+    <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+  </Association>
+  <Association Name="PERMISO_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <End Role="PERMISO" Type="Self.PERMISO" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="LindaSonrisaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BOLETA_CLIENTE" EntityType="Self.BOLETA_CLIENTE" />
+    <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+    <EntitySet Name="COMUNA" EntityType="Self.COMUNA" />
+    <EntitySet Name="CONTACTO" EntityType="Self.CONTACTO" />
+    <EntitySet Name="DIA" EntityType="Self.DIA" />
+    <EntitySet Name="FAMILIA_PRODUCTO" EntityType="Self.FAMILIA_PRODUCTO" />
+    <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" />
+    <EntitySet Name="HORA" EntityType="Self.HORA" />
+    <EntitySet Name="ORDEN_PEDIDO" EntityType="Self.ORDEN_PEDIDO" />
+    <EntitySet Name="PERMISO" EntityType="Self.PERMISO" />
+    <EntitySet Name="PERSONA" EntityType="Self.PERSONA" />
+    <EntitySet Name="PREGUNTA_SECRETA" EntityType="Self.PREGUNTA_SECRETA" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" />
+    <EntitySet Name="PROVEEDOR" EntityType="Self.PROVEEDOR" />
+    <EntitySet Name="RUBRO_PROVEEDOR" EntityType="Self.RUBRO_PROVEEDOR" />
+    <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" />
+    <EntitySet Name="TIPO_ESTADO_PEDIDO" EntityType="Self.TIPO_ESTADO_PEDIDO" />
+    <EntitySet Name="TIPO_FUNCIONARIO" EntityType="Self.TIPO_FUNCIONARIO" />
+    <EntitySet Name="TIPO_PRODUCTO" EntityType="Self.TIPO_PRODUCTO" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <EntitySet Name="VISITAS_WEB" EntityType="Self.VISITAS_WEB" />
+    <AssociationSet Name="SYS_C0011167" Association="Self.SYS_C0011167">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="BOLETA_CLIENTE" EntitySet="BOLETA_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011060" Association="Self.SYS_C0011060">
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+      <End Role="COMUNA" EntitySet="COMUNA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011094" Association="Self.SYS_C0011094">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011145" Association="Self.SYS_C0011145">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="HORA" EntitySet="HORA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011089" Association="Self.SYS_C0011089">
+      <End Role="COMUNA" EntitySet="COMUNA" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011162" Association="Self.SYS_C0011162">
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+      <End Role="DIA" EntitySet="DIA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011116" Association="Self.SYS_C0011116">
+      <End Role="FAMILIA_PRODUCTO" EntitySet="FAMILIA_PRODUCTO" />
+      <End Role="TIPO_PRODUCTO" EntitySet="TIPO_PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011139" Association="Self.SYS_C0011139">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011140" Association="Self.SYS_C0011140">
+      <End Role="TIPO_FUNCIONARIO" EntitySet="TIPO_FUNCIONARIO" />
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011144" Association="Self.SYS_C0011144">
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+      <End Role="HORA" EntitySet="HORA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011156" Association="Self.SYS_C0011156">
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011155" Association="Self.SYS_C0011155">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011157" Association="Self.SYS_C0011157">
+      <End Role="TIPO_ESTADO_PEDIDO" EntitySet="TIPO_ESTADO_PEDIDO" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011090" Association="Self.SYS_C0011090">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011073" Association="Self.SYS_C0011073">
+      <End Role="PREGUNTA_SECRETA" EntitySet="PREGUNTA_SECRETA" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011124" Association="Self.SYS_C0011124">
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011125" Association="Self.SYS_C0011125">
+      <End Role="TIPO_PRODUCTO" EntitySet="TIPO_PRODUCTO" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011108" Association="Self.SYS_C0011108">
+      <End Role="RUBRO_PROVEEDOR" EntitySet="RUBRO_PROVEEDOR" />
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+    </AssociationSet>
+    <AssociationSet Name="DETALLE_BOLETA_CLI" Association="Self.DETALLE_BOLETA_CLI">
+      <End Role="BOLETA_CLIENTE" EntitySet="BOLETA_CLIENTE" />
+      <End Role="SERVICIO" EntitySet="SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="PERMISO_USUARIO" Association="Self.PERMISO_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PERMISO" EntitySet="PERMISO" />
+    </AssociationSet>
+    <FunctionImport Name="PRC_REG_CLIENTEYUSUARIO">
+      <Parameter Name="P_RUT" Mode="In" Type="Decimal" />
+      <Parameter Name="P_DV" Mode="In" Type="String" />
+      <Parameter Name="P_PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_SNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_PAPELLIDO" Mode="In" Type="String" />
+      <Parameter Name="P_SAPELLIDO" Mode="In" Type="String" />
+      <Parameter Name="P_FECHANAC" Mode="In" Type="DateTime" />
+      <Parameter Name="P_SEXO" Mode="In" Type="String" />
+      <Parameter Name="P_DIRECCION" Mode="In" Type="String" />
+      <Parameter Name="P_TELEFONO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_IDCOMUNA" Mode="In" Type="Decimal" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

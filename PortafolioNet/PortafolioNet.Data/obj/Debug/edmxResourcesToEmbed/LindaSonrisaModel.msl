@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LindaSonrisaModelStoreContainer" CdmEntityContainer="LindaSonrisaEntities">
+    <EntitySetMapping Name="BOLETA_CLIENTE">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.BOLETA_CLIENTE">
+        <MappingFragment StoreEntitySet="BOLETA_CLIENTE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="RUT_CLIENTE" ColumnName="RUT_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="VULNERABLE" ColumnName="VULNERABLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMUNA">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.COMUNA">
+        <MappingFragment StoreEntitySet="COMUNA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.CONTACTO">
+        <MappingFragment StoreEntitySet="CONTACTO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIA">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.DIA">
+        <MappingFragment StoreEntitySet="DIA">
+          <ScalarProperty Name="DIA1" ColumnName="DIA" />
+          <ScalarProperty Name="HORA_INICIO" ColumnName="HORA_INICIO" />
+          <ScalarProperty Name="HORA_TERMINO" ColumnName="HORA_TERMINO" />
+          <ScalarProperty Name="RUT_FUNCIONARIO" ColumnName="RUT_FUNCIONARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAMILIA_PRODUCTO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.FAMILIA_PRODUCTO">
+        <MappingFragment StoreEntitySet="FAMILIA_PRODUCTO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUNCIONARIO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.FUNCIONARIO">
+        <MappingFragment StoreEntitySet="FUNCIONARIO">
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="ID_TIPO" ColumnName="ID_TIPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HORA">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.HORA">
+        <MappingFragment StoreEntitySet="HORA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_HORA" ColumnName="FECHA_HORA" />
+          <ScalarProperty Name="RUT_FUNCIONARIO" ColumnName="RUT_FUNCIONARIO" />
+          <ScalarProperty Name="RUT_CLIENTE" ColumnName="RUT_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN_PEDIDO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.ORDEN_PEDIDO">
+        <MappingFragment StoreEntitySet="ORDEN_PEDIDO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_VENC" ColumnName="FECHA_VENC" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_FUNCIONARIO" ColumnName="ID_FUNCIONARIO" />
+          <ScalarProperty Name="ID_ESTADO_PEDIDO" ColumnName="ID_ESTADO_PEDIDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.PERMISO">
+        <MappingFragment StoreEntitySet="PERMISO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONA">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.PERSONA">
+        <MappingFragment StoreEntitySet="PERSONA">
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="DV" ColumnName="DV" />
+          <ScalarProperty Name="P_NOMBRE" ColumnName="P_NOMBRE" />
+          <ScalarProperty Name="S_NOMBRE" ColumnName="S_NOMBRE" />
+          <ScalarProperty Name="P_APELLIDO" ColumnName="P_APELLIDO" />
+          <ScalarProperty Name="S_APELLIDO" ColumnName="S_APELLIDO" />
+          <ScalarProperty Name="FECHA_NAC" ColumnName="FECHA_NAC" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PREGUNTA_SECRETA">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.PREGUNTA_SECRETA">
+        <MappingFragment StoreEntitySet="PREGUNTA_SECRETA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TXT_PREGUNTA" ColumnName="TXT_PREGUNTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="ID_TIPOPRODUCTO" ColumnName="ID_TIPOPRODUCTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDOR">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.PROVEEDOR">
+        <MappingFragment StoreEntitySet="PROVEEDOR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+          <ScalarProperty Name="RUT_EMPRESA" ColumnName="RUT_EMPRESA" />
+          <ScalarProperty Name="DV_EMPRESA" ColumnName="DV_EMPRESA" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="NOMBRE_REPRESENTANTE" ColumnName="NOMBRE_REPRESENTANTE" />
+          <ScalarProperty Name="RUT_REPRESENTANTE" ColumnName="RUT_REPRESENTANTE" />
+          <ScalarProperty Name="DV_REPRESENTANTE" ColumnName="DV_REPRESENTANTE" />
+          <ScalarProperty Name="ID_RUBRO" ColumnName="ID_RUBRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RUBRO_PROVEEDOR">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.RUBRO_PROVEEDOR">
+        <MappingFragment StoreEntitySet="RUBRO_PROVEEDOR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.SERVICIO">
+        <MappingFragment StoreEntitySet="SERVICIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_ESTADO_PEDIDO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.TIPO_ESTADO_PEDIDO">
+        <MappingFragment StoreEntitySet="TIPO_ESTADO_PEDIDO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_FUNCIONARIO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.TIPO_FUNCIONARIO">
+        <MappingFragment StoreEntitySet="TIPO_FUNCIONARIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_PRODUCTO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.TIPO_PRODUCTO">
+        <MappingFragment StoreEntitySet="TIPO_PRODUCTO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_FAMILIA" ColumnName="ID_FAMILIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="ID_PREGUNTA" ColumnName="ID_PREGUNTA" />
+          <ScalarProperty Name="RESP_PREGUNTA" ColumnName="RESP_PREGUNTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISITAS_WEB">
+      <EntityTypeMapping TypeName="LindaSonrisaModel.VISITAS_WEB">
+        <MappingFragment StoreEntitySet="VISITAS_WEB">
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DETALLE_BOLETA_CLI" TypeName="LindaSonrisaModel.DETALLE_BOLETA_CLI" StoreEntitySet="DETALLE_BOLETA_CLI">
+      <EndProperty Name="BOLETA_CLIENTE">
+        <ScalarProperty Name="ID" ColumnName="ID_BOLETA_CLI" />
+      </EndProperty>
+      <EndProperty Name="SERVICIO">
+        <ScalarProperty Name="ID" ColumnName="ID_SERVICIO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PERMISO_USUARIO" TypeName="LindaSonrisaModel.PERMISO_USUARIO" StoreEntitySet="PERMISO_USUARIO">
+      <EndProperty Name="USUARIO">
+        <ScalarProperty Name="ID" ColumnName="ID_USUARIO" />
+      </EndProperty>
+      <EndProperty Name="PERMISO">
+        <ScalarProperty Name="ID" ColumnName="ID_PERMISO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="PRC_REG_CLIENTEYUSUARIO" FunctionName="LindaSonrisaModel.Store.PRC_REG_CLIENTEYUSUARIO" />
+  </EntityContainerMapping>
+</Mapping>
